@@ -1,0 +1,6 @@
+.Imagen{
+    height: 55px;
+    width: 80px;
+    display: flex;
+    background-color: 'transparent'
+}

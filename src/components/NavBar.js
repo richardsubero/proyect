@@ -1,12 +1,12 @@
 import './Navbar.css'
-import CartWidget from './CartWidget'
+import CartWidget from './CartWidget/CartWidget'
 
 const NavBar = () => {
 
     return (
         <nav className="NavBar">
             <div>
-                <h3>Game´MeApp</h3>
+                <h2>Game´MeApp</h2>
             </div>
             <div className="Botones">
                 <button className='Option'>Consolas</button>

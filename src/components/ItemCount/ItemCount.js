@@ -16,11 +16,11 @@ function ItemCount({ stock, initial, onAdd }) {
 
     return (
         <div>
-        <div className="Display">
-            <h3>Agregame</h3>
-            <button onClick={increment}>+</button>
+        <div>
+            <h3>Buy</h3>
             <h3>{count}</h3>
             <button onClick={decrement}>-</button>
+            <button onClick={increment}>+</button>
         </div>
 
         <div>

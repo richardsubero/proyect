@@ -1,5 +1,5 @@
 import './Navbar.css'
-import CartWidget from './CartWidget/CartWidget'
+import CartWidget from '../CartWidget/CartWidget'
 
 const NavBar = () => {
 
@@ -9,9 +9,9 @@ const NavBar = () => {
                 <h2>Game´MeApp</h2>
             </div>
             <div className="Botones">
-                <button className='Option'>Consolas</button>
-                <button className='Option'>Juegos</button>
-                <button className='Option'>Accesorios</button>
+                <button className='Option'>Consoles</button>
+                <button className='Option'>Games</button>
+                <button className='Option'>Accesories</button>
             </div>
             <CartWidget />
         </nav>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { agregarProductos } from '../Products/Products'
+import { agregarProductos } from '../../AsyncMock'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
 

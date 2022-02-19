@@ -1,0 +1,10 @@
+img{
+    width: 210px ;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20%;
+}
+.card{
+    border: 1px solid black;
+    margin: 10px;
+}

@@ -4,20 +4,21 @@ import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
 
 
-const ItemListContainer = () => {
+const ItemListContainer = ()=> {
   const [products, setProducts] = useState([])
 
+  
   useEffect(() => {
-    agregarProductos.then((res) => {
-      setProducts(res);
-    })
-    .catch((error)=>{
-      console.log(error);
-    })
-    .finally(()=>{
-    })
-  },[]);
+      agregarProductos().then(res => {
+          setProducts(res)
+      }).catch(error  => {
+          console.log(error)
+      })
 
+      return (() => {
+          setProducts()
+      })          
+  }, [])
   
 
 
@@ -29,4 +30,4 @@ const ItemListContainer = () => {
   )
 }
 
-export default ItemListContainer;
+export default ItemListContainer

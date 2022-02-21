@@ -1,24 +1,36 @@
+import React, { useEffect, useState } from 'react'
+import { getProduct } from '../../AsyncMock'
+import ItemDetail from '../ItemDetail/ITemDetail'
 import './ItemDetailContainer.css'
+import {useParams} from 'react-router-dom'
 
 
-function ItemDetailContainer () {
+const ItemDetailContainer = () => {
+    const [product, setProduct] = useState()
+    const {productId} = useParams()
+  
+    useEffect(() => {
+      getProduct(productId).then(item => {
+        setProduct(item)
+      }).catch(error => {
+        console.log(error)
+      })
+
+      return (() => {
+        setProduct()
+    })
+
+    }, [productId])
+  
     
-}
+  
+  
+    return (
+      <div>
+        <ItemDetail product ={product}/>
+      </div>
+    )
+  }
 
 
-
-
-
-
-
-
-
-
-
-
-
-export const getItem = new Promise((resolve, reject)=>{
-    setTimeout(()=>{
-    resolve(ItemDetailContainer)
-    }, 2000)
-})
+export default ItemDetailContainer

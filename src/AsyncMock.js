@@ -65,3 +65,12 @@ export const getProduct = (id) => {
     }, 2000)
   })
 }
+
+export const getCategory = (category) => {
+  return new Promise((resolve) => {
+   const produ = products.find(p => p.id === parseInt(category))
+   setTimeout(() => {
+     resolve(produ)
+   }, 2000)
+ })
+}

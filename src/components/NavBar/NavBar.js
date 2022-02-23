@@ -2,7 +2,7 @@ import './Navbar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import { NavLink } from 'react-router-dom'
 
-const NavBar = () => {
+const NavBar = ({product}) => {
 
     return (
         <nav className="NavBar">
@@ -11,7 +11,7 @@ const NavBar = () => {
             </div>
             <div className="Categories">
                 <NavLink
-                    to={'/category/Consoles'}
+                    to={`/category/consoles`}
                     className={({ isActive }) =>
                         isActive ? 'ActiveOption' : 'Option'
                     }
@@ -19,7 +19,7 @@ const NavBar = () => {
                     Consoles
                 </NavLink>
                 <NavLink
-                    to={'/category/Games'}
+                    to={`/category/games`}
                     className={({ isActive }) =>
                         isActive ? 'ActiveOption' : 'Option'
                     }
@@ -27,7 +27,7 @@ const NavBar = () => {
                     Games
                 </NavLink>
                 <NavLink
-                    to={'/category/Accesories'}
+                    to={`category/accesories`}
                     className={({ isActive }) =>
                         isActive ? 'ActiveOption' : 'Option'
                     }

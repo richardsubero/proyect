@@ -19,8 +19,6 @@ const ItemListContainer = ()=> {
           setProducts()
       })          
   }, [])
-  
-
 
   return (
     <div>

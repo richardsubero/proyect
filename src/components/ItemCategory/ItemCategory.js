@@ -1,8 +1,7 @@
-import './ItemDetail.css'
-import ItemCount from '../ItemCount/ItemCount'
+import ItemCount from "../ItemCount/ItemCount";
 
 
-const ItemDetail = ({ product }) => {
+const ItemCategory = ({ product }) => {
     const onAdd = (count) => {
         console.log(`Agregados al Carrito ${count} productos`);
       };
@@ -23,4 +22,4 @@ const ItemDetail = ({ product }) => {
 }
 
 
-export default ItemDetail
+export default ItemCategory

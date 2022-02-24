@@ -69,3 +69,7 @@ h2{
 .NavLink {
   color :rgb(38, 0, 255)
 }
+
+a:link, a:visited, a:active {
+  text-decoration:none;
+}

@@ -1,14 +1,14 @@
 const products = [
   {
     id: 1,
-    price: '1200 $',
+    price: '1200',
     category: 'consoles',
     name: 'Play 5',
     img: 'https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2020/10/01/16015440351819.jpg',
     description: 'PlayStation 5 con Accesorios y una serie de Video juegos ! ',
   },
   {
-    price: '1300$',
+    price: '1300',
     id: 2,
     category: 'consoles',
     name: 'Console Black',
@@ -16,7 +16,7 @@ const products = [
     description: 'La Nueva Consola "Black" con Accesorios y una serie de Video juegos !',
   },
   {
-    price: '300$',
+    price: '300',
     id: 3,
     category: 'games',
     name: 'SpiderMan',
@@ -24,7 +24,7 @@ const products = [
     description: 'El increible juego de Spiderman por 2 , si Doble Spider !!',
   },
   {
-    price: '550$',
+    price: '550',
     id: 4,
     category: 'games',
     name: 'Pack Game',
@@ -32,7 +32,7 @@ const products = [
     description: 'Este increible Pack de 3 Videos juegos a un precio de Locura ',
   },
   {
-    price: '650$',
+    price: '650',
     id: 5,
     category: 'accesories',
     name: 'Joystick Play 4',
@@ -40,7 +40,7 @@ const products = [
     description: 'Joystick totalmante nuevo para PlayStation 4 color SkyBlue ',
   },
   {
-    price: '750$',
+    price: '750',
     id: 6,
     category: 'accesories',
     name: 'Joystick Play 5',

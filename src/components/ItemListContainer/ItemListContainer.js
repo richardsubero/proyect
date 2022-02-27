@@ -29,7 +29,7 @@ const ItemListContainer = ()=> {
 
   return (
     <div>
-      <h1>"Let's Buy!"</h1>
+      <p>"Let's Buy!"</p>
       <ItemList products={products}/>
     </div>
   )

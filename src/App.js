@@ -5,12 +5,14 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Cart from './components/Cart/Cart'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartContextProvider } from './Context/CartContext';
+import { NotificationServicesProvider } from './service/notification/NotificationServices';
 
 function App() {
 
 
   return (
     <div className="App , Container">
+      <NotificationServicesProvider>
       <CartContextProvider>
       <BrowserRouter>
         <NavBar />
@@ -22,6 +24,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       </CartContextProvider>
+      </NotificationServicesProvider>
     </div>
   );
 }

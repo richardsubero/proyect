@@ -1,14 +1,19 @@
 .CardItem {
-    width: 270px;
+    width: 1000px;
     padding: 30px;
     margin: 30px;
     font-size: 15px;
     background-color: rgb(159, 173, 253);
     border: 1px solid #e1e1e1;
     border-radius: 10px;
+    display:grid;
 }
 
 h5{
     font-size: 20px;
     color: rgb(9, 22, 63);
+}
+.center{
+    display: flex;
+    justify-content: center;
 }

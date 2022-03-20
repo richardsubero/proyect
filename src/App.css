@@ -1,3 +1,10 @@
+:root{
+  --background-color: #ffffff;
+}
+
+html {
+  background-color: var(--background-color);
+}
 .App {
     position: relative;
     height: 100vh;
@@ -5,5 +12,5 @@
     margin: 0 auto;
     z-index: 0;
     text-align: center;
-    background-image: url(./components/img/Deadpool.jpg);
+    background-color: rgb(125, 184, 218);
   }

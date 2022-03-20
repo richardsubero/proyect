@@ -21,7 +21,7 @@ const NavBar = () => {
     return (
         <nav className="NavBar">
             <Link to={'/'}>
-                <h1>Game´MeApp</h1>
+                <h2>Game´MeApp</h2>
             </Link>
             <div className="Categories">
             {categories.map(cat => <NavLink key={cat.id} to={`/category/${cat.id}`} className={({ isActive }) =>

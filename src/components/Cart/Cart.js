@@ -6,6 +6,7 @@ import { writeBatch, getDocs, collection, addDoc, Timestamp, where, query, docum
 import { firestoreDb } from '../../service/firebase/firebase'
 import { useNotificationServices } from '../../service/notification/NotificationServices'
 import Togglable from '../Togglable/Togglable'
+import CarritoVacio from '../img/no-cart.png'
 
 
 const Cart = () => {
@@ -77,7 +78,9 @@ const Cart = () => {
 
 
     if (cart.length === 0) {
-        return <h1 style={{ color: 'white' }}>No hay productos en el carrito</h1>
+        return <h1 style={{ color: 'white' }}>Upps...
+        <img className="carritoVacio" src={CarritoVacio}alt={"carritoVacio"}/>
+        </h1>
     }
 
 
@@ -93,10 +96,10 @@ const Cart = () => {
                     return (
                         <div key={prod.id} style={{ display: 'flex' }}>
                             <picture>
-                                <img style={{ width: '100px' }} className='img' src={prod.img} alt={img} />
+                                <img style={{ width: '200px' }} className='img' src={prod.img} alt={img} />
                             </picture>
                             <h3 style={{ color: 'white', margin: '22px' }}>{prod.name}</h3>
-                            <h3 style={{ color: 'black' }}>Cantidad {prod.quantity}</h3>
+                            <h3 style={{ color: 'black', margin: '20px' }}>Cantidad {prod.quantity}</h3>
                             <button className="Option" onClick={() => handleRemoveItem(prod.id, prod.name)}>X</button>
                         </div>
                     )

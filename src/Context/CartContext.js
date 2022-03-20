@@ -1,9 +1,11 @@
-import { createContext, useState } from "react"
+import React from 'react'
+import { createContext} from "react"
+import useLocalStorage from '../custom/useLocalStorage';
 
 const Context = createContext()
 
 export const CartContextProvider = ({ children }) => {
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useLocalStorage('cart',[]);
   
   const addItem = (productToAdd, quantity) => {
     isInCart(productToAdd.id)

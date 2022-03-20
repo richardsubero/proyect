@@ -7,10 +7,10 @@ import { useNotificationServices } from '../../service/notification/Notification
 
 
 
-const ItemDetail = ({  id, name, img, category, description, price, stock }) => {
+const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
     const [quantity, setQuantity] = useState(0)
 
-    const {addItem} = useContext(CartContext)
+    const { addItem } = useContext(CartContext)
     const setNotification = useNotificationServices()
 
     const handleOnAdd = (quantity) => {
@@ -27,25 +27,31 @@ const ItemDetail = ({  id, name, img, category, description, price, stock }) => 
         }
 
         addItem(productToAdd, quantity)
-        setNotification('success',`Se agrego ${name} al carrito`)
+        setNotification('success', `Se agrego ${name} al carrito`)
     }
 
     return (
-        
-            <div className='CardItem'>
-                <h2>{name}</h2>
-                <picture>
-                    <img className='img' src={img} alt={name} />
-                </picture>
-                <h3>Categoria: {category}</h3>
-                <h3>Precio: {price}</h3>
-                {quantity === 0 ? 
-                (<ItemCount stock={stock} initial={1} onAdd={handleOnAdd} />) :
-                        (<Link to={'/cart'} className='Option'>Ir al carrito de compras</Link>)}
-                <h5>Descripción: {description}</h5>
-                <Link to={'/'} className='Option'>Volver Home</Link>
+
+        <div className='CardItem'>
+            <h2>{name}</h2>
+            <picture>
+                <img style={{ width: '400px' }} className='img' src={img} alt={name} />
+            </picture>
+            <h3>Categoria: {category}</h3>
+            <h3>Precio: {price}</h3>
+            <h2>
+                <dt>Stock</dt>
+                <dd>{stock}</dd>
+            </h2>
+            <div className='center'>
+                {quantity === 0 ?
+                    (<ItemCount stock={stock} initial={1} onAdd={handleOnAdd} />) :
+                    (<Link to={'/cart'} className='Option'>Ir al carrito de compras</Link>)}
             </div>
-        
+            <h5>Descripción: {description}</h5>
+            <Link to={'/'} className='Option'>Volver Home</Link>
+        </div>
+
     )
 }
 

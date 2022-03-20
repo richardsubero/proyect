@@ -39,15 +39,15 @@ const ContactForm = ({ toggleVisibility, setContact }) => {
             <label className='LabelContact'>Telefono:
               <input
                 className='InputContact'
-                type='text'
+                type='number'
                 value={phone}
                 onChange={({ target }) => setPhone(target.value)}
               />
             </label>
-            <label className='LabelContact'>Direccion:
+            <label className='LabelContact'>E-mail:
               <input
                 className='InputContact'
-                type='text'
+                type='mail'
                 value={address}
                 onChange={({ target }) => setAddress(target.value)}
               />
